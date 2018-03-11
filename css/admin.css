@@ -1,0 +1,12 @@
+/* Admin CSS */
+
+/* Post widget style */
+
+.slider-options {
+	display: none;
+}
+
+.is-slider:checked ~ .slider-options {
+	display: block;
+	margin-left: 2em;
+} 
