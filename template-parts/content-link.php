@@ -12,7 +12,7 @@
 
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<span class="sticky-post"><?php _e( 'Featured', 'nuria' ); ?></span>
+			<span class="sticky-post"><?php esc_html_e( 'Featured', 'nuria' ); ?></span>
 		<?php endif; ?>
 
 		<div class="entry-meta">
@@ -26,10 +26,10 @@
 
 	<div class="entry-content">
 		<?php
-			/* translators: %s: Name of current post */
 			the_content( sprintf(
+				/* translators: 1. Read more text, 2. Name of current post */
 				wp_kses( __( '%1$s<span class="screen-reader-text"> "%2$s"</span>', 'nuria' ), nuria_only_allow_span() ),
-				esc_htmlesc_html__('Read More', 'nuria') . nuria_svg_icon('arrow-right'),
+				esc_html__('Read More', 'nuria') . nuria_svg_icon('arrow-right'),
 				get_the_title()
 			) );
 

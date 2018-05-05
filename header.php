@@ -39,7 +39,7 @@
 
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php esc_html_e( $description ); ?></p>
+						<p class="site-description"><?php esc_html( $description ); ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 
@@ -53,6 +53,7 @@
 									wp_nav_menu( array(
 										'theme_location' => 'primary',
 										'menu_class'     => 'primary-menu',
+										'fallback_cb' 	 => 'wp_page_menu',
 									 ) );
 								?>
 							</nav><!-- .main-navigation -->

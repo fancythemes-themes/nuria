@@ -179,7 +179,6 @@ function nuria_apply_customizer_css(){
 	if ( is_customize_preview() ) {
 		wp_enqueue_style( 'nuria-preview-style', get_template_directory_uri() . '/css/customize-preview.css', array( 'nuria-style' ), '20160816' );
 		wp_add_inline_style( 'nuria-preview-style', $css );
-		//wp_add_inline_style( 'nuria-style', esc_attr($css) );
 	} else {
 		wp_add_inline_style( 'nuria-style', $css );
 	}

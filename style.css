@@ -1,17 +1,17 @@
 /*
 Theme Name: Nuria
-Theme URI: https://fancythemes.com/nuria/
+Theme URI: https://fancythemes.com/themes/nuria/
 Author: FancyThemes
 Author URI: https://fancythemes.com/
 Description: Nuria is a clean WordPress theme for blogging, it can be for personal, travel, food or any other blog. Designed by focusing on readability. Developed following modern web technology and trends and follow the Web Standard, such as CSS flexbox, SVG for icons and graphics.
-Version: 1.0
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
 Text Domain: nuria
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Nuria WordPress Theme, Copyright 2018 FancyThemes
+Nuria is distributed under the terms of the GNU GPL
 */
 
 
@@ -319,6 +319,8 @@ blockquote {
 	line-height: 1.333333;
 	margin: 5px 0 28px;
 	overflow: hidden;
+	padding-left: 28px;
+	border-left: 1px solid currentColor;
 }
 
 blockquote,
@@ -511,7 +513,7 @@ table {
 	margin: 0 0 28px;
 	table-layout: fixed;
 	/* Prevents HTML tables from becoming too wide */
-	width: 100%;
+	max-width: 100%;
 }
 
 caption,
@@ -586,16 +588,6 @@ input[type="submit"],
 	padding: 19px 35px 16px;
 	max-width: 100%;
 	border-radius: 30px;
-}
-
-button[disabled]:hover,
-button[disabled]:focus,
-input[type="button"][disabled]:hover,
-input[type="button"][disabled]:focus,
-input[type="reset"][disabled]:hover,
-input[type="reset"][disabled]:focus,
-input[type="submit"][disabled]:hover,
-input[type="submit"][disabled]:focus {
 }
 
 button:hover,
@@ -756,16 +748,6 @@ a:active {
 	outline: 0;
 }
 
-.entry-content a,
-.taxonomy-description a,
-.logged-in-as a,
-.comment-content a,
-.pingback .comment-body > a,
-.textwidget a,
-.entry-meta a:hover,
-.site-info a:hover {
-}
-
 .entry-content a:hover,
 .entry-content a:focus,
 .taxonomy-description a:hover,
@@ -793,9 +775,6 @@ a:active {
 	padding: 0px 40px;
 	margin-top: 10px;
 	border-bottom: 1px solid #dddddd;
-}
-
-.site-header-menu.toggled-on {
 }
 
 .site-header-menu.toggled-on .main-navigation,
@@ -1054,9 +1033,6 @@ a:active {
 	display: inline-block;
 	opacity: 0.7;
 	padding: 0 7px;
-}
-
-.footer-navigation {
 }
 
 .footer-navigation ul {
@@ -1527,8 +1503,6 @@ h3.jp-relatedposts-headline {
 	margin-top: 10px;
 	margin-left: 20px;
 }
-.widget_nav_menu li ul {
-}
 
 /* Custom widget recent posts */
 
@@ -1587,10 +1561,6 @@ h3.jp-relatedposts-headline {
 .widget-recent-posts .small-thumbnail-view .post-thumbnail ~ .entry-meta,
 .widget-recent-posts .small-thumbnail-view .post-thumbnail ~ .entry-title {
 	padding-left: 100px;
-}
-
-.widget-area-full .widget-recent-posts .thumbnail-view,
-.widget-area-full .widget-recent-posts .small-thumbnail-view {
 }
 
 .widget-area-full .widget-recent-posts .thumbnail-view:not(.posts-slider),
@@ -2395,12 +2365,9 @@ body.search-no-results .page-header {
 	border: 1px solid #dddddd;
 	border-radius: 2px;
 	display: inline-block;
-	font-size: 16px;
-	font-size: 1rem;
-	height: 24px;
 	line-height: 1.6923076923em;
 	margin-right: 4px;
-	width: 24px;
+	padding: 0 5px;
 }
 
 .page-links a:hover,
@@ -2414,9 +2381,10 @@ body.search-no-results .page-header {
 	border: 0;
 	color: #000000;
 	height: auto;
-	margin: 0;
-	padding-right: 8px;
+	padding: 0;
+	margin-right: 8px;
 	width: auto;
+
 }
 
 .entry-attachment {
@@ -2533,13 +2501,7 @@ body.search-no-results .page-header {
 	font-size: 30px;
 	font-size: 1.875rem;
 	line-height: 1.333333;
-	color: #000000;
 	margin-top: 5px;
-}
-
-.format-link .entry-content > p:first-child > a:first-child:hover,
-.format-link .entry-content > p:first-child > a:first-child:focus {
-	color: #1fe392;
 }
 
 /**
@@ -2718,9 +2680,6 @@ body.search-no-results .page-header {
 
 .comment-list .comment-form {
 	padding-bottom: 28px;
-}
-
-.comment-notes {
 }
 
 .comment-awaiting-moderation,
@@ -3681,10 +3640,6 @@ p > video {
 		max-width: 100%;
 	}
 
-	.author-avatar {
-
-	}
-
 	.author-avatar .avatar {
 		width: 120px;
 		height: auto;
@@ -3878,7 +3833,7 @@ p > video {
 
 	.main-navigation ul ul a {
 		white-space: normal;
-		width: 190px;
+		width: 230px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -3907,7 +3862,7 @@ p > video {
 	.main-navigation li:hover > ul,
 	.main-navigation li.focus > ul {
 		left: auto;
-		right: 0;
+		right: 23px;
 	}
 
 	.main-navigation ul ul li:hover > ul,
@@ -3917,8 +3872,7 @@ p > video {
 	}
 
 	.main-navigation .menu-item-has-children > a {
-		margin: 0;
-		padding-right: 36px;
+		margin-right: 60px;
 	}
 
 	.main-navigation .menu-item-has-children > a:after {
@@ -3930,7 +3884,7 @@ p > video {
 		transform: rotate(-45deg);
 		border-left: 2px solid currentColor;
 		border-bottom: 2px solid currentColor;
-		right: 16px;
+		right: 40px;
 		top: 8px;
 	}
 
@@ -4296,6 +4250,10 @@ p > video {
 		padding: 0 40px; 
 	}
 
+	.site-info:first-child {
+		padding-top: 40px;
+	}
+
 	.no-sidebar .content-area {
 		float: none;
 		margin: 0;
@@ -4417,6 +4375,20 @@ p > video {
 		margin-left: 80px;
 	}
 
+	.classic-view .site-main > article .entry-content > .alignleft,
+	.single .site-main > article .entry-content > .alignleft {
+		margin: 6px 40px 28px 0;
+	}
+
+	.classic-view .site-main > article .entry-content > .alignright,
+	.single .site-main > article .entry-content > .alignright {
+		margin: 6px 0 28px 40px;
+	}
+
+	.classic-view .site-main > article .entry-content > figure,
+	.single .site-main > article .entry-content > figure {
+		max-width: calc( 100% - 160px );
+	}
 	.classic-view .site-main > article .entry-meta {
 		padding-left: 80px;
 	}

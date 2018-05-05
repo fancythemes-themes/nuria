@@ -1,11 +1,14 @@
 === Nuria ===
 Contributors: FancyThemes
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.5
-Version: 1.2
+Tested up to: WordPress 4.9
+Version: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: dark, light, one-column, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+Nuria WordPress Theme, Copyright 2018 FancyThemes
+Nuria is distributed under the terms of the GNU GPL
 
 == Description ==
 Nuria Theme Documentation.
@@ -15,7 +18,7 @@ Nuria Theme Documentation.
 * Custom Header
 * Social Links
 * Post Formats
-* The GPL v2.0 or later license. :) Use it to make something cool.
+* The GPL v2.0 or later license.
 
 == Installation ==
 
@@ -44,7 +47,9 @@ GNU General Public License for more details.
 * Flexslider, (c) 2015 WooThemes, GNU GPL, Version 2 (or later), https://github.com/woothemes/FlexSlider/
 * FitVids, (c) by Chris Coyier and Paravel, https://github.com/davatron5000/FitVids.js/
 * Svgxuse, (c) 2015 by Keyamoon, MIT, https://github.com/Keyamoon/svgxuse/
-* Photographs used on Screenshot, (c) by Nic, CC0, http://littlevisuals.co/
-* Josefin Sans, by ---, Apache License 2.0, Hosted at Google Fonts
-* Source Sans Pro by --, Open Font License, Hosted at: Google Fonts
-
+* Motorbike photograph used on screenshot, (c) by Nic, CC0, http://littlevisuals.co/tagged/week-nine
+* Old car photograph used on screenshot, (c) by Nic, CC0, http://littlevisuals.co/tagged/week-nine
+* Forest photograph used on screenshot, (c) by Nic, CC0, http://littlevisuals.co/tagged/week-twelve
+* Josefin Sans, by Santiago Orozco, Open Font License, Hosted at Google Fonts
+* Source Sans Pro by Paul D. Hunt, Open Font License, Hosted at: Google Fonts
+* IM Fell French Canon Pro by Igino Marini, Open Font License, Hosted at: Google Fonts

@@ -81,7 +81,7 @@
 	}
 
 	$( document ).ready( function() {
-		wp.customizez.selectiveRefresh.bind( 'partial-content-rendered', function( placement ) {
+		wp.customize.selectiveRefresh.bind( 'partial-content-rendered', function( placement ) {
 			var slider, sliderOpts;
 			if ( placement.container ) {
 				slider = $( '.posts-slider', placement.container );

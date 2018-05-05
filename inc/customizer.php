@@ -150,9 +150,9 @@ function nuria_customize_items( $settings ) {
 	// Setting : Content background color 
 	$settings[] = array(
 		'default'			=> '#ffffff',
-		'sanitize_callback' => 'nuria_sanitize_color_field',
+		'sanitize_callback' => 'sanitize_hex_color',
 		'id'				=> 'content_background_color',
-		'label'				=> esc_html__('Content Box Background Color', 'nuria'),
+		'label'				=> esc_html__('Background Color', 'nuria'),
 		'type'				=> 'color',
 		'transport'			=> 'postMessage',
 		'section'			=> 'colors',
@@ -221,7 +221,7 @@ function nuria_customize_items( $settings ) {
 	// Setting : Content text color 
 	$settings[] = array(
 		'default'			=> '#000000',
-		'sanitize_callback' => 'nuria_sanitize_color_field',
+		'sanitize_callback' => 'sanitize_hex_color',
 		'id'				=> 'text_color',
 		'label'				=> esc_html__('Text Color', 'nuria'),
 		'type'				=> 'color',
@@ -475,7 +475,7 @@ function nuria_customize_items( $settings ) {
 	// Setting : Link color 
 	$settings[] = array(
 		'default'			=> '#1fe392',
-		'sanitize_callback' => 'nuria_sanitize_color_field',
+		'sanitize_callback' => 'sanitize_hex_color',
 		'id'				=> 'link_color',
 		'label'				=> esc_html__('Link Color', 'nuria'),
 		'type'				=> 'color',

@@ -165,10 +165,10 @@ class Nuria_Widget_Recent_Posts extends WP_Widget {
 		$is_slider		= isset( $instance['is_slider'] ) ? esc_attr( $instance['is_slider'] ) : false;
 
 ?>
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'nuria' ); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'nuria' ); ?></label>
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'nuria' ); ?></label>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'category' ) ); ?>"><?php esc_html_e( 'Category:', 'nuria' ); ?></label>
 			<?php wp_dropdown_categories( 
 					array (
 						'show_option_all' => esc_html__('All Categories', 'nuria'),
@@ -180,39 +180,39 @@ class Nuria_Widget_Recent_Posts extends WP_Widget {
 			?>
 		</p>
 
-		<p><label for="<?php echo $this->get_field_id( 'tags' ); ?>"><?php esc_html_e( 'Tags:', 'nuria' ); ?></label>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'tags' ) ); ?>"><?php esc_html_e( 'Tags:', 'nuria' ); ?></label>
 		<input class="widefat" id="<?php $this->get_field_id( 'tags' ); ?>" name="<?php echo $this->get_field_name( 'tags' ); ?>" type="text" value="<?php echo $tags; ?>" />
 		</p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:', 'nuria' ); ?></label>
-		<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'nuria' ); ?></label>
+		<input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'sort' ); ?>"><?php esc_html_e( 'Sort By:', 'nuria' ); ?></label>
-			<select id="<?php echo $this->get_field_id( 'sort' ); ?>" name="<?php echo $this->get_field_name( 'sort' ); ?>" >
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'sort' ) ); ?>"><?php esc_html_e( 'Sort By:', 'nuria' ); ?></label>
+			<select id="<?php echo esc_attr( $this->get_field_id( 'sort' ) ); ?>" name="<?php echo $this->get_field_name( 'sort' ); ?>" >
 				<option value="date" <?php selected( $sort, 'date' ); ?> > <?php esc_html_e('Date', 'nuria'); ?> </option>
-				<option value="comment_count" <?php selected( $sort, 'comment_count' ); ?> > <?php _e('Comments Number', 'nuria'); ?> </option>
+				<option value="comment_count" <?php selected( $sort, 'comment_count' ); ?> > <?php esc_html_e('Comments Number', 'nuria'); ?> </option>
 			</select>
 		</p>
 		<p>
-			<span><?php _e('Presented as', 'nuria'); ?></span><br>
-			<input type="radio" id="<?php echo $this->get_field_id( 'presentation' ) . '-1'; ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="thumbnail" <?php checked( $presentation, 'thumbnail'); ?> />
-			<label for="<?php echo $this->get_field_id( 'presentation' ) . '-1'; ?>"><?php esc_html_e( 'Large Thumbnail', 'nuria'); ?></label><br>
+			<span><?php esc_html_e('Presented as', 'nuria'); ?></span><br>
+			<input type="radio" id="<?php echo esc_attr( $this->get_field_id( 'presentation' ) . '-1' ); ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="thumbnail" <?php checked( $presentation, 'thumbnail'); ?> />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'presentation' ) . '-1' ); ?>"><?php esc_html_e( 'Large Thumbnail', 'nuria'); ?></label><br>
 			
-			<input type="radio" id="<?php echo $this->get_field_id( 'presentation' ) . '-2'; ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="small-thumbnail" <?php checked( $presentation, 'small-thumbnail'); ?>/>
-			<label for="<?php echo $this->get_field_id( 'presentation' ) . '-2'; ?>"><?php esc_html_e( 'Small thumbnail', 'nuria'); ?></label><br>
+			<input type="radio" id="<?php echo esc_attr( $this->get_field_id( 'presentation' ) . '-2' ); ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="small-thumbnail" <?php checked( $presentation, 'small-thumbnail'); ?>/>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'presentation' ) . '-2' ); ?>"><?php esc_html_e( 'Small thumbnail', 'nuria'); ?></label><br>
 			
-			<input type="radio" id="<?php echo $this->get_field_id( 'presentation' ) . '-3'; ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="image-overlay" class="presentation-featured-opt" <?php checked( $presentation, 'image-overlay'); ?>/>
-			<label for="<?php echo $this->get_field_id( 'presentation' ) . '-3'; ?>"><?php esc_html_e( 'Image Overlay', 'nuria'); ?></label><br>
+			<input type="radio" id="<?php echo esc_attr( $this->get_field_id( 'presentation' ) . '-3' ); ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="image-overlay" class="presentation-featured-opt" <?php checked( $presentation, 'image-overlay'); ?>/>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'presentation' ) . '-3' ); ?>"><?php esc_html_e( 'Image Overlay', 'nuria'); ?></label><br>
 			
-			<input type="checkbox" id="<?php echo $this->get_field_id( 'is_slider' ); ?>" name="<?php echo $this->get_field_name( 'is_slider' ); ?>" value="slider" class="is-slider" <?php checked( $is_slider, 'slider'); ?>/>
-			<label for="<?php echo $this->get_field_id( 'is_slider' ); ?>"><?php esc_html_e( 'Show as slider', 'nuria'); ?></label><br> 
+			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'is_slider' ) ); ?>" name="<?php echo $this->get_field_name( 'is_slider' ); ?>" value="slider" class="is-slider" <?php checked( $is_slider, 'slider'); ?>/>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'is_slider' ) ); ?>"><?php esc_html_e( 'Show as slider', 'nuria'); ?></label><br> 
 
 			<span class="slider-options">
-				<input type="checkbox" id="<?php echo $this->get_field_id( 'slideshow' ); ?>" name="<?php echo $this->get_field_name( 'slideshow' ); ?>" value="slideshow" <?php checked( $slideshow, 'slideshow'); ?> /><label for="<?php echo $this->get_field_id( 'slideshow' ); ?>"><?php esc_html_e('Slideshow', 'nuria'); ?></label><br>
-				<label for="<?php echo $this->get_field_id( 'slideshow_time' ); ?>"><?php esc_html_e( 'Slideshow time:', 'nuria' ); ?></label><br>
-				<input class="tiny-text" id="<?php echo $this->get_field_id( 'slideshow_time' ); ?>" name="<?php echo $this->get_field_name( 'slideshow_time' ); ?>" type="number" step="1" min="1" value="<?php echo $slideshow_time; ?>" size="3" /> 
+				<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'slideshow' ) ); ?>" name="<?php echo $this->get_field_name( 'slideshow' ); ?>" value="slideshow" <?php checked( $slideshow, 'slideshow'); ?> /><label for="<?php echo esc_attr( $this->get_field_id( 'slideshow' ) ); ?>"><?php esc_html_e('Slideshow', 'nuria'); ?></label><br>
+				<label for="<?php echo esc_attr( $this->get_field_id( 'slideshow_time' ) ); ?>"><?php esc_html_e( 'Slideshow time:', 'nuria' ); ?></label><br>
+				<input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'slideshow_time' ) ); ?>" name="<?php echo $this->get_field_name( 'slideshow_time' ); ?>" type="number" step="1" min="1" value="<?php echo $slideshow_time; ?>" size="3" /> 
 				<?php esc_html_e('in seconds', 'nuria'); ?><br>
-				<label for="<?php echo $this->get_field_id( 'animation' ); ?>"><?php esc_html_e( 'Slide Animation:', 'nuria' ); ?></label>
+				<label for="<?php echo esc_attr( $this->get_field_id( 'animation' ) ); ?>"><?php esc_html_e( 'Slide Animation:', 'nuria' ); ?></label>
 			</span>
 		</p>
 <?php

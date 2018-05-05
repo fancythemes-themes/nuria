@@ -34,7 +34,10 @@
 		</p>
 		<p>
 			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( esc_html__( 'View all posts by %s', 'nuria' ), get_the_author() ); ?>
+				<?php
+				/* translators: %s Author name */ 
+				printf( esc_html__( 'View all posts by %s', 'nuria' ), get_the_author() );
+				?>
 			</a>
 		</p><!-- .author-bio -->
 	</div><!-- .author-description -->

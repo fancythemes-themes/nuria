@@ -28,8 +28,8 @@
 
 	<div class="entry-content">
 		<?php
-			/* translators: %s: Name of current post */
 			the_content( sprintf(
+				/* translators: 1. Read more text, 2. Name of current post */
 				wp_kses( __( '%1$s<span class="screen-reader-text"> "%2$s"</span>', 'nuria' ), nuria_only_allow_span() ),
 				esc_html__('Read More', 'nuria') . nuria_svg_icon('arrow-right'),
 				get_the_title()

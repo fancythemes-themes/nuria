@@ -154,8 +154,8 @@ function nuria_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Full Width Header Widget', 'nuria' ),
-		'description'	=> esc_html__( 'Placed on the top before main content. Best use for featured posts.', 'nuria'),
+		'name'          => esc_html__( 'Top Featured Widget Area', 'nuria' ),
+		'description'	=> esc_html__( 'Placed on the top before main content in the homepage. Best use for featured posts.', 'nuria'),
 		'id'            => 'header-widget-full-width',
 		'before_widget' => '<section id="%1$s" class="widget header-widget %2$s">',
 		'after_widget'  => '</section>',
@@ -164,7 +164,7 @@ function nuria_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Full Width Footer Widget', 'nuria' ),
+		'name'          => esc_html__( 'Bottom Featured Widget Area', 'nuria' ),
 		'id'            => 'footer-widget-full-width',
 		'before_widget' => '<section id="%1$s" class="widget footer-widget %2$s">',
 		'after_widget'  => '</section>',
@@ -298,7 +298,7 @@ function nuria_scripts() {
 
 	wp_enqueue_script( 'nuria-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
 
-	wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/svgxuse.min.js', array(), '1.2.4' );
+	wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/svgxuse.js', array(), '1.2.4' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -317,7 +317,7 @@ function nuria_scripts() {
 		'loadingText'  => esc_html__( 'Loading...', 'nuria' ),
 	) );
 
-	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '20160816', true );
+	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array( 'jquery' ), '20160816', true );
 
 	$featured_posts_type =  get_theme_mod('featured_posts_type', 'carousel');
 	wp_localize_script( 'nuria-script', 'sliderOptions', array(
@@ -446,19 +446,6 @@ require get_template_directory() . '/inc/sanitize-callbacks.php';
  */
 require get_template_directory() . '/inc/widgets/recent-posts.php';
 
-if ( class_exists( 'StormTwitter' ) ) :
-	/**
-	 * Twitter widget. Only include when the oAuth Twitter Feed for Developer plugin installed
-	 *
-	 */
-	require get_template_directory() . '/inc/widgets/twitter.php';
-endif;
-
-/**
- * Instagram widget.
- *
- */
-require get_template_directory() . '/inc/widgets/instagram.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -523,21 +510,6 @@ function nuria_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'nuria_widget_tag_cloud_args' );
 
-/**
- * Adding extra markup on widget title, wrap the last word with a <span>
- *
- * @since Nuria 1.0
- *
- */
-function nuria_widget_title( $title, $instance, $id_base) {
-
-	$array_word = explode(' ', $title );
-	$array_word[ count($array_word) - 1 ] = '<span>' . $array_word[ count($array_word) - 1 ] . '</span>';
-	$title = implode(' ', $array_word);
-
-	return $title;
-}
-//add_filter('widget_title', 'nuria_widget_title', 10, 3);
 
 /**
  * Replace the string 'icon_replace' on SVG use xlink:href attribute from wp_nav_menu's link_before argument by the escaped domain name from link url
